@@ -21,7 +21,7 @@ func main() {
 	// 接続の要求を行う
 	conn, err := net.DialTCP("tcp", nil, tcpAddr)
 	// ソケットにデータの書き込み
-	_, err = conn.Write([]byte("HEAD / HTTP/1.0\r\n\r\n"))
+	_, err = conn.Write([]byte("こんにちは"))
 	res := make([]byte, 1024)
 	// ソケットからデータの読み込み
 	len, err := conn.Read(res)
